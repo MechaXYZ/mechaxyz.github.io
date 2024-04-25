@@ -1,0 +1,42 @@
+hr {
+	width: 50%;
+	margin-top: 3%;
+	margin-left: 2%;
+	border-color: #2A9E4A;
+	background-color: #2A9E4A;
+}
+
+p, li {
+	padding: 0.5%;
+	color: #75E287;
+	margin-left: 3%;
+	font-size: 14px;
+	margin-bottom: 1%;
+	font-family: "Lucida Console", monospace;
+}
+
+canvas {
+	top: 0;
+	left: 0;
+	z-index: -1;
+	display: block;
+	position: fixed;
+}
+
+a {
+	color: #845ED2;
+	text-decoration-style: none;
+}
+
+body {
+	background-color: #101010;
+}
+
+#title {
+	font-size: 24px;
+}
+
+#desc {
+	display: none;
+	margin-left: 5%;
+}
