@@ -6,7 +6,7 @@ hr {
 	background-color: #2A9E4A;
 }
 
-p, li {
+p, li, div {
 	padding: 3px;
 	color: #75E287;
 	font-size: 14px;
@@ -33,11 +33,16 @@ body {
 }
 
 #title {
+	width: 18ch;
 	font-size: 24px;
-	padding-left: 3px;
 }
 
 #desc {
 	display: none;
 	padding-left: 15px;
+}
+
+.typewrite > .wrap {
+	padding-right: 8px;
+	border-right: 0.08em solid #75E287;
 }
