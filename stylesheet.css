@@ -7,7 +7,7 @@ hr {
 }
 
 p, li, div {
-	padding: 3px;
+	padding: 5px;
 	color: #75E287;
 	font-size: 14px;
 	margin-left: 25px;
@@ -15,7 +15,7 @@ p, li, div {
 	font-family: "Lucida Console", monospace;
 }
 
-canvas {
+.matrix {
 	top: 0;
 	left: 0;
 	z-index: -1;
@@ -24,12 +24,12 @@ canvas {
 }
 
 a {
-	color: #845ED2;
-	text-decoration-style: none;
+	color: #ac83ff;
+	text-decoration-style: none; /* why won't this work :sob: */
 }
 
 body {
-	background-color: #101010;
+	background-color: #000;
 }
 
 #title {
