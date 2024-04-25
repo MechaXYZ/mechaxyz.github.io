@@ -2,23 +2,23 @@
 // matrix rain - https://codepen.io/yaclive/pen/EayLYO
 
 const base = "https://github.com/MechaXYZ/cats/raw/main/green"
-var canvas = document.querySelector(".matrix")
-var ctx = canvas.getContext("2d")
+var matrix = document.querySelector(".matrix")
+var ctx = matrix.getContext("2d")
 var images = []
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+matrix.width = window.innerWidth
+matrix.height = window.innerHeight
 
 var letters = " goofy.matrix.rain.effect"
 letters = letters.split("")
 
 var font_size = 50
-var columns = canvas.width / font_size
+var columns = Math.floor(matrix.width / font_size)
 
 var drops = []
 
 for (let i = 0; i < columns; i++) {
-	drops[i] = canvas.height
+	drops[i] = matrix.height
 }
 
 for (var i = 1; i <= 24; i++) {
@@ -30,7 +30,7 @@ for (var i = 1; i <= 24; i++) {
 
 function draw() {
 	ctx.fillStyle = "rgba(0, 0, 0, .1)"
-	ctx.fillRect(0, 0, canvas.width, canvas.height)
+	ctx.fillRect(0, 0, matrix.width, matrix.height)
 
 	for (var i = 0; i < drops.length; i++) {
 		// var text = letters[drops[i] % letters.length]
@@ -44,7 +44,7 @@ function draw() {
 
 		drops[i]++
 		
-		if (drops[i] * font_size > canvas.height && Math.random() > .96) {
+		if (drops[i] * font_size > matrix.height && Math.random() > .96) {
 			drops[i] = 0
 		}
 	}
@@ -84,18 +84,30 @@ Typewriter.prototype.tick = function() {
 	}
 }
 
-window.onload = function() {
-	setTimeout(function() {	
-		setInterval(draw, 66)
+setInterval(draw, 66)
 
-		var elements = document.getElementsByClassName("typewrite")
+setTimeout(function() {	
+	var elements = document.getElementsByClassName("typewrite")
 
-		for (var i = 0; i < elements.length; i++) {
-			var text = elements[i].getAttribute("data-text")
-			var bold = elements[i].getAttribute("data-bold")
-			var time = parseFloat(elements[i].getAttribute("data-time"))
+	for (var i = 0; i < elements.length; i++) {
+		var text = elements[i].getAttribute("data-text")
+		var bold = elements[i].getAttribute("data-bold")
+		var time = parseFloat(elements[i].getAttribute("data-time"))
 
-			new Typewriter(elements[i], text, time, bold)
+		new Typewriter(elements[i], text, time, bold)
+	}
+}, 50)
+
+window.onresize = function() {
+	matrix.width = window.innerWidth
+	matrix.height = window.innerHeight
+
+	columns = Math.floor(matrix.width / font_size)
+	drops = drops.slice(0, columns)
+
+	for (let i = 0; i < columns; i++) {
+		if (drops[i] == null) {
+			drops[i] = matrix.height
 		}
-	}, 100)
+	}
 }

@@ -2,6 +2,7 @@ hr {
 	width: 50%;
 	margin-top: 3px;
 	margin-left: 20px;
+	position: absolute;
 	border-color: #2A9E4A;
 	background-color: #2A9E4A;
 }
@@ -29,6 +30,7 @@ a {
 }
 
 body {
+	display: flex;
 	background-color: #000;
 }
 
