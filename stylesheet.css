@@ -1,17 +1,17 @@
 hr {
 	width: 50%;
-	margin-top: 3%;
-	margin-left: 2%;
+	margin-top: 3px;
+	margin-left: 20px;
 	border-color: #2A9E4A;
 	background-color: #2A9E4A;
 }
 
 p, li {
-	padding: 0.5%;
+	padding: 3px;
 	color: #75E287;
-	margin-left: 3%;
 	font-size: 14px;
-	margin-bottom: 1%;
+	margin-left: 25px;
+	margin-bottom: 10px;
 	font-family: "Lucida Console", monospace;
 }
 
@@ -34,9 +34,10 @@ body {
 
 #title {
 	font-size: 24px;
+	padding-left: 3px;
 }
 
 #desc {
 	display: none;
-	margin-left: 5%;
+	padding-left: 15px;
 }
