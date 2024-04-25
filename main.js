@@ -12,7 +12,7 @@ canvas.height = window.innerHeight
 var letters = " goofy.matrix.rain.effect"
 letters = letters.split("")
 
-var font_size = 20
+var font_size = 50
 var columns = canvas.width / font_size
 
 var drops = []
