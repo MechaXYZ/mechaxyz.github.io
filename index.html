@@ -6,7 +6,11 @@
 	
 	<body>
 		<canvas class="matrix"></canvas>
-		<script src="main.js"></script>
+		<canvas class="doom_fire"></canvas>
+		
+		<script src="matrix.js"></script>
+		<script src="typewriter.js"></script>
+		<script src="doom_fire.js"></script>
 
 		<div id="title" class="typewrite" data-text="mechaxyz.github.io" data-bold="true" data-time="1">‎</div>
 		<p id="desc">random stuff i've made</p>
@@ -45,5 +49,11 @@
 				- same as above but for github codespaces, use this over the above if you want stuff outside of the workspace folder to be saved
 			</li>
 		</ul>
+		<br/>
+
+		<!--⏸️-->
+		
+		<audio class="song" src="music.ogg"></audio>
+		<button class="songbird" onclick="document.querySelector('.song').play()">▶️</button> 
 	</body>
 </html>

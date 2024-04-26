@@ -15,12 +15,23 @@ p, li, div {
 	font-family: "Lucida Console", monospace;
 }
 
-.matrix {
+.songbird {
+	width: 5em;
+	padding: 5px;
+	color: #75E287;
+	font-size: large;
+	margin-left: 35px;
+	border-radius: 10px;
+	background-color: #000;
+	border-color: #2A9E4A;
+}
+
+canvas {
 	top: 0;
 	left: 0;
 	z-index: -1;
 	display: block;
-	position: fixed;
+	position: absolute;
 }
 
 a {
